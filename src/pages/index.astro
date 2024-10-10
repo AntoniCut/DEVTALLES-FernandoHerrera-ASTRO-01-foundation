@@ -1,16 +1,39 @@
 ---
 
+import MainLayout from "../layouts/MainLayout.astro";
+
+//  -----  Server Only  -----
+const name = "Antonio Cutillas";
+
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title> 🧑‍🚀 My Primera App con Astro 🧑‍🚀 </title>
-	</head>
-	<body>
-		<h1> 🧑‍🚀 Astro 🧑‍🚀 </h1>
-	</body>
-</html>
+<MainLayout title="🧑‍🚀 Home Page 🧑‍🚀"> 
+
+    <h1>🧑‍🚀 Home Page 🧑‍🚀</h1>
+
+    <h2>My name is: {name}</h2>
+
+    <p>momento Actual: {new Date().toLocaleTimeString()}</p>
+
+    <p id="currentTime">
+      <!-- currentTime -->
+    </p>
+    
+    <span id="year"> 
+        <!-- span   -->
+    </span>
+
+
+
+    <script>
+        const currentTime = document.getElementById("currentTime") as HTMLElement;
+        const year = document.querySelector("#year") as HTMLElement;
+
+        const ActualTime: string = new Date().toLocaleTimeString();
+        const currentYear: number = new Date().getFullYear();
+
+        currentTime.innerHTML = `Momento Actual: ${ActualTime}`;
+        year.innerHTML = `Año: ${currentYear}`;
+    </script>
+
+</MainLayout>
