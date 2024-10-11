@@ -7,6 +7,11 @@ const name = "Antonio Cutillas";
 
 ---
 
+<!-- ***********************************************************  -->
+<!-- **********  01/foundation/src/pages/index.astro  ********** -->
+<!-- ***********************************************************  -->
+
+
 <MainLayout title="🧑‍🚀 Home Page 🧑‍🚀"> 
 
     <h1>🧑‍🚀 Home Page 🧑‍🚀</h1>
@@ -20,12 +25,11 @@ const name = "Antonio Cutillas";
     </p>
     
     <span id="year"> 
-        <!-- span   -->
+        <!-- year   -->
     </span>
 
-
-
     <script>
+
         const currentTime = document.getElementById("currentTime") as HTMLElement;
         const year = document.querySelector("#year") as HTMLElement;
 
@@ -34,6 +38,7 @@ const name = "Antonio Cutillas";
 
         currentTime.innerHTML = `Momento Actual: ${ActualTime}`;
         year.innerHTML = `Año: ${currentYear}`;
+        
     </script>
 
 </MainLayout>

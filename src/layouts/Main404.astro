@@ -1,7 +1,6 @@
 ---
 
-import { ViewTransitions } from "astro:transitions";
-import NavBar from "../Component/NavBar.astro";
+//import NavBar from "../Component/NavBar.astro";
 
 interface Props {
   title: string;
@@ -11,14 +10,14 @@ interface Props {
 
 const { title, age, isActive } = Astro.props;
 
-import '../styles/global.css';
+import '../styles/404.css';
 
 ---
 
 
-<!-- *****************************************************************  -->
-<!-- **********  01/foundation/src/layout/MainLayout.astro  ********** -->
-<!-- *****************************************************************  -->
+<!-- *******************************************************************  -->
+<!-- **********  01/foundation/src/layout/Main404.astro  *************** -->
+<!-- *******************************************************************  -->
 
 
 <html lang="es">
@@ -28,18 +27,15 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title> {title} </title>
-    <ViewTransitions />
   </head>
 
   <body>
     
-    <NavBar />
-
-    <main>
-      <slot />
-    </main>
-   
+    
+    <slot />
+    
   </body>
+
   
 </html>
 
